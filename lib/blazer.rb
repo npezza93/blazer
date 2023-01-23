@@ -114,6 +114,10 @@ module Blazer
     @user_method
   end
 
+  def self.modification_method
+    @modification_method ||= settings["modification_method"]
+  end
+
   def self.settings
     @settings ||= begin
       path = Rails.root.join("config", "blazer.yml").to_s
